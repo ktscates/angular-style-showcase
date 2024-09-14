@@ -1,0 +1,123 @@
+/* header.component.scss */
+
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/functions';
+@import '../../../styles/themes';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 $spacing;
+  max-width: $max-width;
+  margin: 0 auto;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Adding shadow here
+  background-color: var(--background-color) rgba(0, 26, 41, 0.9);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .blog-title {
+      color: var(--color); // Use CSS variable
+      font-size: rem(32);
+      font-family: $font-family;
+      cursor: pointer;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    .dark-mode-toggle {
+      cursor: pointer;
+      margin-left: $spacing;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--color); // Use CSS variable
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: $spacing / 2;
+      font-family: $font-family;
+      font-size: rem(20);
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: var(--color); // Use CSS variable
+          padding: $spacing / 2;
+          border-radius: 4px;
+
+          &:hover {
+            color: var(--color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 $spacing * 2 0 0;
+
+      .blog-title {
+        flex-grow: 1;
+      }
+
+      .hamburger {
+        display: flex;
+        margin-right: $padding;
+      }
+
+      .dark-mode-toggle {
+        margin-right: $spacing;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 0 0 0 $padding;
+
+        &.active {
+          display: flex;
+        }
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

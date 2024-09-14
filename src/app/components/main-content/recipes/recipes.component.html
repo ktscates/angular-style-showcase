@@ -1,0 +1,18 @@
+<!-- @if (recipes.length > 0) { -->
+<div class="recipe-list">
+  @for (recipe of recipes; track $index) {
+  <div class="recipe-card">
+    <img [src]="recipe.image" alt="{{ recipe.name }}" />
+    <div class="recipe-details">
+      <h3>{{ recipe.name }}</h3>
+      <p>{{ recipe.name }}</p>
+      <button (click)="viewRecipe(recipe.id)">View Recipe</button>
+    </div>
+  </div>
+  }
+</div>
+<!-- } @else {
+<ng-template>
+  <p>No recipes available at the moment.</p>
+</ng-template>
+} -->

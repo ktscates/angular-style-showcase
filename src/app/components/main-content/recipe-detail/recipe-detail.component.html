@@ -1,0 +1,27 @@
+<main class="recipe-detail-container">
+  <div class="recipe-image">
+    <img [src]="recipe.image" alt="{{ recipe.name }}" />
+  </div>
+  <div class="recipe-details">
+    <h1>{{ recipe.name }}</h1>
+    <p class="description">{{ recipe.name }}</p>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        @for (ingredient of recipe.ingredients; track $index) {
+        <li>{{ ingredient }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="preparation">
+      <h2>Preparation Steps</h2>
+      <ol>
+        @for (step of recipe.instructions; track $index) {
+        <li>{{ step }}</li>
+        }
+      </ol>
+    </div>
+  </div>
+</main>

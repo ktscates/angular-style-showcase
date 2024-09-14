@@ -1,0 +1,46 @@
+<header [ngClass]="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
+  <nav>
+    <h1
+      class="blog-title"
+      (click)="navigateToHome()"
+      (keydown)="onKeydown($event)"
+      tabindex="0"
+    >
+      Reci<span>PeaZ</span>
+    </h1>
+
+    <!-- Hamburger Icon -->
+    <div
+      class="hamburger"
+      (click)="toggleMenu()"
+      (keydown)="onKeydown($event)"
+      tabindex="0"
+    >
+      <img src="../../../assets/hamburger.svg" alt="bars" />
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" [ngClass]="{ active: isMenuOpen }">
+      <li>
+        <a (click)="navigateToHome()" (keydown)="onKeydown($event)" tabindex="0"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a (click)="viewAllRecipes()" (keydown)="onKeydown($event)" tabindex="0"
+          >Recipes</a
+        >
+      </li>
+    </ul>
+
+    <img
+      [src]="
+        isDarkTheme ? '../../../assets/light.svg' : '../../../assets/dark.svg'
+      "
+      [alt]="isDarkTheme ? 'light mode' : 'dark mode'"
+      (click)="switchTheme()"
+      (keydown)="onKeydown($event)"
+      tabindex="0"
+    />
+  </nav>
+</header>

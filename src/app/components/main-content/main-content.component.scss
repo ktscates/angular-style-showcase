@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+@import '../../../styles/functions';
+@import '../../../styles/mixins';
+
+main {
+  font-family: $font-family;
+  padding: $spacing;
+
+  section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lighten($primary-color, 40%);
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    gap: $spacing;
+    overflow-y: hidden;
+    height: 70vh;
+
+    .text-content {
+      text-align: left;
+
+      h1 {
+        font-size: rem(36);
+        margin-bottom: $spacing / 2;
+        color: $primary-color;
+      }
+
+      p {
+        font-size: rem(18);
+        margin-bottom: $spacing;
+        color: $black-color;
+      }
+
+      button {
+        padding: $spacing / 2 $spacing;
+        font-size: rem(18);
+        background-color: $primary-color;
+        color: $white-color;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .image-content {
+      max-width: 60%;
+
+      img {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column;
+
+      .text-content,
+      .image-content {
+        max-width: 100%;
+        text-align: center; // Centers text on small screens
+      }
+    }
+  }
+}

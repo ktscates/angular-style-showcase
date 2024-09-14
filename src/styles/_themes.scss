@@ -1,0 +1,24 @@
+@import '../styles/variables';
+
+$light-theme: (
+  background: $white-color,
+  color: $black-color,
+);
+
+$dark-theme: (
+  background: $dark-navy,
+  color: $white-color,
+);
+
+@mixin theme($theme-map) {
+  background-color: map-get($theme-map, background);
+  color: map-get($theme-map, color);
+}
+
+body.light-theme {
+  @include theme($light-theme);
+}
+
+body.dark-theme {
+  @include theme($dark-theme);
+}

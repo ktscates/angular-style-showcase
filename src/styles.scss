@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/functions";
+@import "./styles/themes";
+
+html body {
+  font-family: "Share", sans-serif;
+  height: 100%;
+
+  main {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+}
