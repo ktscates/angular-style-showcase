@@ -10,7 +10,7 @@
       <h2>Ingredients</h2>
       <ul>
         @for (ingredient of recipe.ingredients; track $index) {
-        <li>{{ ingredient }}</li>
+          <li>{{ ingredient }}</li>
         }
       </ul>
     </div>
@@ -19,7 +19,7 @@
       <h2>Preparation Steps</h2>
       <ol>
         @for (step of recipe.instructions; track $index) {
-        <li>{{ step }}</li>
+          <li>{{ step }}</li>
         }
       </ol>
     </div>
