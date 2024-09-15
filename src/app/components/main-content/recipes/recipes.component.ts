@@ -20,7 +20,7 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipeService.getRecipes().subscribe(data => {
-      this.recipes = data.recipes // Assuming 'recipes' is the key in the response
+      this.recipes = data.recipes
     })
   }
   viewRecipe(id: number) {

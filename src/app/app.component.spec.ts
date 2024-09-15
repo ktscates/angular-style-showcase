@@ -18,4 +18,18 @@ describe('AppComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('should initialize with the correct theme from localStorage', () => {
+    component.toggleTheme()
+    expect(component.isDarkTheme).toBe(true)
+    expect(document.body.classList.contains('dark-theme')).toBe(true)
+    expect(document.body.classList.contains('light-theme')).toBe(false)
+  })
+
+  it('should toggle theme from saved local storage', () => {
+    component.toggleTheme()
+    expect(component.isDarkTheme).toBe(false)
+    expect(document.body.classList.contains('dark-theme')).toBe(false)
+    expect(document.body.classList.contains('light-theme')).toBe(true)
+  })
 })

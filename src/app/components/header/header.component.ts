@@ -34,7 +34,7 @@ export class HeaderComponent {
 
   onKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault() // Prevent scrolling on spacebar
+      event.preventDefault()
       ;(event.target as HTMLElement).click()
     }
   }
