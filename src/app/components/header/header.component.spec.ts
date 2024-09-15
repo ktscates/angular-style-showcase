@@ -46,7 +46,7 @@ describe('HeaderComponent', () => {
     expect(mockRouter.navigate).toHaveBeenCalledWith(['/'])
   })
 
-  it('should handle keypress', () => {
+  it('should handle Enter keypress', () => {
     const mockEvent = {
       key: 'Enter',
       preventDefault: jest.fn(),
@@ -57,7 +57,7 @@ describe('HeaderComponent', () => {
     expect((mockEvent.target as HTMLElement).click).toHaveBeenCalled()
   })
 
-  it('should handle Space keypress and trigger click event', () => {
+  it('should handle Space keypress', () => {
     const mockEvent = {
       key: ' ',
       preventDefault: jest.fn(),

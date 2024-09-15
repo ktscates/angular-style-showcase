@@ -14,7 +14,7 @@ describe('MainContentComponent', () => {
 
     fixture = TestBed.createComponent(MainContentComponent)
     component = fixture.componentInstance
-    router = TestBed.inject(Router) // Inject Router for spy usage
+    router = TestBed.inject(Router)
     fixture.detectChanges()
   })
 
