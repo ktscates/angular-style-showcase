@@ -4,6 +4,21 @@
 
 This project is a simple Angular application designed to demonstrate proficiency with the Angular CLI, component-based architecture, and advanced SCSS preprocessing techniques. The application includes a responsive layout, theme switching between light and dark modes, and various SCSS features such as variables, mixins, and functions. It also showcases lazy loading for optimized module loading and routing.
 
+## Features
+
+- Header, Footer, and Main Content components
+- Responsive layout with mobile-friendly design
+- Light and dark themes
+- Lazy loading
+
+## Technologies Used
+
+- Angular for frontend framework
+- SCSS for advanced styling
+- Jest for testing
+- Eslint
+- Prettier
+
 ## Getting Started
 
 ### Installation
